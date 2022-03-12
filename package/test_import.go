@@ -6,7 +6,7 @@ import (
 	"fmt"
 )
 
-func init()  {
+func init() {
 	fmt.Println("this is main package init")
 }
 

@@ -8,7 +8,7 @@ import (
 	"google.golang.org/grpc"
 )
 
-func main(){
+func main() {
 	conn, err := grpc.Dial("127.0.0.1:8889", grpc.WithInsecure())
 
 	if err != nil {
@@ -25,7 +25,7 @@ func main(){
 
 	response, _ := client.GetUser(context.Background(), req)
 
-	resp,err := json.Marshal(response)
+	resp, err := json.Marshal(response)
 
 	fmt.Printf("%s", resp)
 

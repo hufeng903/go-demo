@@ -13,24 +13,23 @@ type UserServiceInterface interface {
 }
 
 type UserServiceStruct struct {
-
 }
 
 func NewUserService() UserServiceInterface {
 	return &UserServiceStruct{}
 }
 
-func (userService *UserServiceStruct) GetUser(ctx context.Context, req *user.UserRequest) (*user.UserResponse ,error) {
-	response := &user.UserResponse {
-		Id: req.Id,
+func (userService *UserServiceStruct) GetUser(ctx context.Context, req *user.UserRequest) (*user.UserResponse, error) {
+	response := &user.UserResponse{
+		Id:   req.Id,
 		Name: "Hello World",
 	}
 
-	return response,nil
+	return response, nil
 }
 
-func main()  {
-	l,err := net.Listen("tcp", "127.0.0.1:8889")
+func main() {
+	l, err := net.Listen("tcp", "127.0.0.1:8889")
 
 	if err != nil {
 		panic(err)
@@ -50,6 +49,5 @@ func main()  {
 	if err != nil {
 		println(err)
 	}
-
 
 }

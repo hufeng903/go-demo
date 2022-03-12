@@ -2,11 +2,11 @@ package p1
 
 import "fmt"
 
-func init()  {
+func init() {
 	fmt.Println("this is  p1 package init")
 }
-func main()  {
-	
+func main() {
+
 }
 
 func Test1() {
