@@ -2,6 +2,9 @@ package p1
 
 import "fmt"
 
+func init()  {
+	fmt.Println("this is  p4 package init")
+}
 func main()  {
 
 }
