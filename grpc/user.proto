@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package user;
+
+//新版本需要的配置
+option go_package = "./user";
+
+message UserRequest {
+    int32 id = 1;
+}
+
+message UserResponse {
+    int32 id = 1;
+    string name = 2;
+}
+
+service UserService {
+    rpc getUser(UserRequest) returns (UserResponse) {};
+}
