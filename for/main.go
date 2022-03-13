@@ -17,21 +17,21 @@ func main() {
 	}
 
 	//省略初始化
-	//var h int32 = 10
-	//
-	//for ; h < 10; h++ {
-	//	println(h)
-	//}
-	//
-	////省略后置子句, 死循环
-	//for h < 10 {
-	//	println(h)
-	//}
-	//
-	////省略初始化和后置子句，类似if
-	//for h == 10 {
-	//	println(h)
-	//}
+	var h int32 = 10
+
+	for ; h < 10; h++ {
+		println(h)
+	}
+
+	//省略后置子句, 死循环
+	for h < 10 {
+		println(h)
+	}
+
+	//省略初始化和后置子句，类似if
+	for h == 10 {
+		println(h)
+	}
 
 	//循环数组
 	arr := [4]int{1, 2, 3, 4}
@@ -58,7 +58,7 @@ func main() {
 	delete(mapTest, "d")
 
 	for k, v := range mapTest {
-		fmt.Printf("%d => %d", k, v)
+		fmt.Printf("%s => %s \n", k, v)
 	}
 
 }
